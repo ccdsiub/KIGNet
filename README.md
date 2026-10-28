@@ -1,4 +1,4 @@
-# KIGNet: Physics-Motivated Multi-Graph Representation Learning for Explainable Jet Tagging
+# Physics-Motivated Multi-Graph Representation Learning for Explainable Jet Tagging
 
 <p align="center">
   <a href="https://arxiv.org/abs/2512.07420">
