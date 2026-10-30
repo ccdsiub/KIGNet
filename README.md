@@ -5,8 +5,8 @@
     <img src="https://img.shields.io/badge/arXiv-2512.07420-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"/>
   </a>
   &nbsp;
-  <a href="https://link.springer.com/journal/13130">
-    <img src="https://img.shields.io/badge/Submitted%20to-JHEP-006699?style=for-the-badge&logo=academia&logoColor=white" alt="JHEP"/>
+  <a href="https://journals.aps.org/prd/">
+    <img src="https://img.shields.io/badge/Submitted%20to-PRD-006699?style=for-the-badge&logo=academia&logoColor=white" alt="PRD"/>
   </a>
 </p>
 <p align="center">
@@ -229,19 +229,34 @@ If you use this work, please cite:
 
 ## Contact
 
-<p align="center">
-  <strong>Questions or collaborations?</strong><br><br>
-  <a href="mailto:adrita.khan.official@gmail.com"><img src="https://img.shields.io/badge/Adrita%20Khan-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Adrita Khan"/></a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/adrita-khan"><img src="https://img.shields.io/badge/Adrita%20Khan-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Adrita Khan"/></a>
-  &nbsp;
-  <a href="https://x.com/Adrita_"><img src="https://img.shields.io/badge/@Adrita__-Twitter%2FX-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Adrita"/></a>
-  <br><br>
-  <a href="mailto:raqibul.islam.academic@gmail.com"><img src="https://img.shields.io/badge/Md%20Raqibul%20Islam-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Raqibul Islam"/></a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/raqib03/"><img src="https://img.shields.io/badge/Md%20Raqibul%20Islam-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Raqibul Islam"/></a>
-  &nbsp;
-  <a href="https://x.com/raqib_03"><img src="https://img.shields.io/badge/@raqib__03-Twitter%2FX-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Raqibul"/></a>
-  <br><br>
-  <a href="mailto:sazzat@iub.edu.bd"><img src="https://img.shields.io/badge/Mir%20Sazzat%20Hossain-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Mir Sazzat Hossain"/></a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">&nbsp;<strong>Questions or collaborations?</strong>&nbsp;</td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="mailto:adrita.khan.official@gmail.com"><img src="https://img.shields.io/badge/Adrita%20Khan-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Adrita Khan"/></a>
+      &nbsp;
+      <a href="https://www.linkedin.com/in/adrita-khan"><img src="https://img.shields.io/badge/Adrita%20Khan-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Adrita Khan"/></a>
+      &nbsp;
+      <a href="https://x.com/Adrita_"><img src="https://img.shields.io/badge/@Adrita__-Twitter%2FX-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Adrita"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="mailto:raqibul.islam.academic@gmail.com"><img src="https://img.shields.io/badge/Md%20Raqibul%20Islam-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Raqibul Islam"/></a>
+      &nbsp;
+      <a href="https://www.linkedin.com/in/raqib03/"><img src="https://img.shields.io/badge/Md%20Raqibul%20Islam-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Raqibul Islam"/></a>
+      &nbsp;
+      <a href="https://x.com/raqib_03"><img src="https://img.shields.io/badge/@raqib__03-Twitter%2FX-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Raqibul"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="mailto:sazzat@iub.edu.bd"><img src="https://img.shields.io/badge/Mir%20Sazzat%20Hossain-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Mir Sazzat Hossain"/></a>
+    </td>
+  </tr>
+</table>
