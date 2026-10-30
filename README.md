@@ -24,7 +24,7 @@
   <a href="https://github.com/Adrita-Khan/Jet-Tagging/issues"><img src="https://img.shields.io/github/issues/Adrita-Khan/Jet-Tagging" alt="Issues"></a>
 </p>
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=ff8c00&center=true&vCenter=true&repeat=true&width=820&lines=Jet+Tagging+%7C+High-Energy+Physics;Explainable+Particle+Chebyshev+Networks;Physics-Motivated+Feature+Engineering;Lund+Jet+Plane+Inspired;4-Momentum+Interaction+Features;JetClass+Dataset+%7C+CERN+Open+Data;Grad-CAM+Explainability+in+HEP;Deep+Learning+for+Particle+Physics;Jet+Substructure+Analysis;Graph+Neural+Networks;Aspen+Open+Jets+%7C+Real+CMS+Data" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=ff8c00&center=true&vCenter=true&repeat=true&width=820&lines=Jet+Tagging+%7C+High-Energy+Physics;Physics-Motivated+Multi-Graph+Representation+Learning;Explainable+Jet+Tagging;Physics-Motivated+Feature+Engineering;Lund+Jet+Plane+Inspired;4-Momentum+Interaction+Features;JetClass+Dataset+%7C+CERN+Open+Data;Grad-CAM+Explainability+in+HEP;Deep+Learning+for+Particle+Physics;Jet+Substructure+Analysis;Graph+Neural+Networks;Aspen+Open+Jets+%7C+Real+CMS+Data" alt="Typing SVG" />
 </p>
 
 > **Note:** This project is ongoing and subject to continuous updates.
@@ -33,9 +33,9 @@
 
 ## Overview
 
-This repository presents **E-PCN** — the **Explainable Particle Chebyshev Network** — a graph neural network for jet tagging in high-energy physics. Jet tagging refers to the task of identifying and classifying collimated sprays of particles (jets) produced in high-energy collisions and associating them with their originating particles or decay processes.
+This repository presents a **physics-motivated multi-graph representation learning framework for explainable jet tagging** in high-energy physics. Jet tagging refers to the task of identifying and classifying collimated sprays of particles (jets) produced in high-energy collisions and associating them with their originating particles or decay processes.
 
-E-PCN extends the base PCN architecture by constructing **four parallel graph representations** per jet, each weighted by a distinct physics-motivated kinematic variable: angular separation ($\Delta$), relative transverse momentum ($k_T$), momentum fraction ($z$), and invariant mass squared ($m^2$). Three of these variables ($\Delta$, $k_T$, $z$) are motivated by the **Lund jet plane** formalism, grounded in perturbative QCD factorization; the fourth ($m^2$) provides complementary mass-scale sensitivity for heavy-flavor jet identification. Explainability is achieved through **Gradient-weighted Class Activation Mapping (Grad-CAM)**, which quantifies each variable's contribution to classification decisions.
+The framework extends the base PCN architecture by constructing **four parallel graph representations** per jet, each weighted by a distinct physics-motivated kinematic variable: angular separation ($\Delta$), relative transverse momentum ($k_T$), momentum fraction ($z$), and invariant mass squared ($m^2$). Three of these variables ($\Delta$, $k_T$, $z$) are motivated by the **Lund jet plane** formalism, grounded in perturbative QCD factorization; the fourth ($m^2$) provides complementary mass-scale sensitivity for heavy-flavor jet identification. Explainability is achieved through **Gradient-weighted Class Activation Mapping (Grad-CAM)**, which quantifies each variable's contribution to classification decisions.
 
 This is a project of the [Center for Computational and Data Sciences (CCDS)](https://ccds.ai/), Independent University, Bangladesh, in collaboration with the [Department of Theoretical Physics, University of Dhaka](https://www.du.ac.bd/body/MissionVision/TPHY).
 
@@ -45,13 +45,13 @@ This is a project of the [Center for Computational and Data Sciences (CCDS)](htt
 
 ### JetClass Benchmark (Simulated Data)
 
-| Metric | PCN (baseline) | E-PCN (ours) | Improvement |
+| Metric | PCN (baseline) | Ours | Improvement |
 |:------:|:--------------:|:------------:|:-----------:|
 | Macro-Accuracy | 0.9249 | **0.9467** | +2.36% |
 | Macro-AUC | 0.9294 | **0.9678** | +4.13% |
 | Macro-AUPR | 0.6599 | **0.8241** | +24.88% |
 
-E-PCN achieves the highest classification accuracy among all compared models, surpassing the Particle Transformer (ParT) at 93.12% by 1.55 percentage points. The most dramatic gains are in heavy-flavor channels: AUPR for $H \to b\bar{b}$ improves by **81.53%** (0.4738 → 0.8601) and $H \to c\bar{c}$ by **51.54%** (0.4577 → 0.6936).
+Our multi-graph model achieves the highest classification accuracy among all compared models, surpassing the Particle Transformer (ParT) at 93.12% by 1.55 percentage points. The most dramatic gains are in heavy-flavor channels: AUPR for $H \to b\bar{b}$ improves by **81.53%** (0.4738 → 0.8601) and $H \to c\bar{c}$ by **51.54%** (0.4577 → 0.6936).
 
 ### State-of-the-Art Comparison
 
@@ -62,13 +62,13 @@ E-PCN achieves the highest classification accuracy among all compared models, su
 | ParticleNet | 0.9015 | 0.9521 |
 | ParT | 0.9312 | 0.9687 |
 | PCN (baseline) | 0.9249 | 0.9294 |
-| **E-PCN (ours)** | **0.9467** | **0.9678** |
+| **Ours** | **0.9467** | **0.9678** |
 
 ### Real CMS Data: Aspen Open Jets
 
 Evaluated on the Aspen Open Jets dataset of real CMS proton-proton collision data using unsupervised clustering metrics:
 
-| Metric | PCN | E-PCN | Improvement |
+| Metric | PCN | Ours | Improvement |
 |:------:|:---:|:-----:|:-----------:|
 | Davies-Bouldin Index ↓ | 0.8395 | **0.4017** | −52.15% |
 | Dunn Index ↑ | 0.0189 | **0.0269** | +42.33% |
@@ -123,7 +123,7 @@ This factorization makes ($\Delta$, $k_T$) the natural axes of the Lund jet plan
 
 ## Architecture
 
-E-PCN processes each jet through four parallel GNN branches — one per kinematic variable — each consisting of alternating **Chebyshev graph convolutions (ChebConv)** and **edge convolutions (EdgeConv)** (ChebConv → EdgeConv → ChebConv → EdgeConv → ChebConv). Each branch produces a 64-dimensional jet-level embedding via mean pooling. The four embeddings are stacked into a 4×64 matrix and combined by a **1×1 convolution**, which learns to weight the kinematic representations adaptively. Two fully connected layers with dropout (rate 0.1) produce the final class probabilities via softmax.
+The model processes each jet through four parallel GNN branches — one per kinematic variable — each consisting of alternating **Chebyshev graph convolutions (ChebConv)** and **edge convolutions (EdgeConv)** (ChebConv → EdgeConv → ChebConv → EdgeConv → ChebConv). Each branch produces a 64-dimensional jet-level embedding via mean pooling. The four embeddings are stacked into a 4×64 matrix and combined by a **1×1 convolution**, which learns to weight the kinematic representations adaptively. Two fully connected layers with dropout (rate 0.1) produce the final class probabilities via softmax.
 
 ### Explainability via Grad-CAM
 
@@ -185,7 +185,7 @@ Key hyperparameters from the paper:
 ### Repository Structure
 
 ```
-E-PCN/
+./
 ├── raqib-pcn-experiments/                              # Main experiment scripts and notebooks
 ├── pythia-data-gen.md                                  # Data generation tutorial for Pythia
 ├── pythia-installation.md                              # Pythia installation guide
@@ -201,7 +201,7 @@ E-PCN/
 
 | # | Title | Venue |
 |:-:|:------|:-----:|
-| 1 | E-PCN: Jet Tagging with Explainable Particle Chebyshev Networks | [arXiv:2512.07420](https://arxiv.org/abs/2512.07420) |
+| 1 | Physics-Motivated Multi-Graph Representation Learning for Explainable Jet Tagging | [arXiv:2512.07420](https://arxiv.org/abs/2512.07420) |
 | 2 | PCN: A Deep Learning Approach to Jet Tagging Using Chebyshev Graph Convolutions | [JHEP 2024](https://link.springer.com/article/10.1007/JHEP07(2024)247) |
 | 3 | The Lund Jet Plane | [JHEP 2018](https://link.springer.com/article/10.1007/JHEP12(2018)064) |
 | 4 | Jet Tagging in the Lund Plane with Graph Networks | [JHEP 2021](https://link.springer.com/article/10.1007/JHEP03(2021)052) |
@@ -230,8 +230,8 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 If you use this work, please cite:
 
 ```bibtex
-@article{islam2025epcn,
-  title     = {E-PCN: Jet Tagging with Explainable Particle Chebyshev Networks Using Kinematic Features},
+@article{islam2025physics,
+  title     = {Physics-Motivated Multi-Graph Representation Learning for Explainable Jet Tagging},
   author    = {Islam, Md Raqibul and Khan, Adrita and Hossain, Mir Sazzat and Siddiqui, Choudhury Ben Yamin and Hossain, Md. Zakir and Khan, Tanjib and Momen, M. Arshad and Ali, Amin Ahsan and Rahman, AKM Mahbubur},
   journal   = {arXiv preprint arXiv:2512.07420},
   year      = {2025}
