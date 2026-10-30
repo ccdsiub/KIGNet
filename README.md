@@ -182,19 +182,6 @@ Key hyperparameters from the paper:
 | Max Epochs | 500 |
 | Early Stop patience | 10 epochs |
 
-### Repository Structure
-
-```
-./
-├── raqib-pcn-experiments/                              # Main experiment scripts and notebooks
-├── pythia-data-gen.md                                  # Data generation tutorial for Pythia
-├── pythia-installation.md                              # Pythia installation guide
-├── pythia-jet-tagging-data-generation-tutorial.md      # Jet tagging data generation walkthrough
-├── pythia-python-guide.md                              # Python interface guide for Pythia
-├── requirements.txt                                    # Python dependencies
-└── README.md                                           # This file
-```
-
 ---
 
 ## References
